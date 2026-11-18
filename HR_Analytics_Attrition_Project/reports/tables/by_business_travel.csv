@@ -1,0 +1,4 @@
+BusinessTravel,Employees,Attrition,AvgMonthlyIncome,AvgYearsAtCompany,Active,AttritionRatePct
+Travel_Frequently,277,69,6193.7,7.2,208,24.91
+Travel_Rarely,1043,156,6619.7,6.9,887,14.96
+Non-Travel,150,12,6261.9,7.1,138,8.0

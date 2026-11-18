@@ -1,0 +1,5 @@
+income_quartile,min_income,max_income,employees,attrition_rate_pct
+1,1009,2911,368,29.35
+2,2911,4930,368,14.13
+3,4936,8380,367,10.63
+4,8381,19999,367,10.35

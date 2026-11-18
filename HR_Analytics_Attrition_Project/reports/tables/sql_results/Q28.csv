@@ -1,0 +1,11 @@
+department_name,employee_number,monthly_income,dept_avg_income,diff_from_dept_avg
+Sales,1876,1081,6959.0,-5878.0
+Sales,1928,1091,6959.0,-5868.0
+Sales,1273,1118,6959.0,-5841.0
+Sales,1427,1359,6959.0,-5600.0
+Sales,1624,1569,6959.0,-5390.0
+Sales,167,1675,6959.0,-5284.0
+Research & Development,701,1009,6281.0,-5272.0
+Research & Development,243,1102,6281.0,-5179.0
+Sales,2023,1790,6959.0,-5169.0
+Human Resources,1714,1555,6655.0,-5100.0

@@ -1,0 +1,6 @@
+AgeGroup,Employees,Attrition,AvgMonthlyIncome,AvgYearsAtCompany,Active,AttritionRatePct
+18-25,123,44,2972.9,2.5,79,35.77
+26-35,606,116,4895.6,6.0,490,19.14
+36-45,468,43,7104.4,8.1,425,9.19
+46-55,226,26,10928.0,9.6,200,11.5
+56+,47,8,9197.7,8.5,39,17.02

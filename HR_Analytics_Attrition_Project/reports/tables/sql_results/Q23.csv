@@ -1,0 +1,4 @@
+department_name,employees,attrition_rate_pct,company_rate_pct,gap_vs_company_pts,status
+Sales,446,20.63,16.12,4.51,Above average
+Human Resources,63,19.05,16.12,2.93,Above average
+Research & Development,961,13.84,16.12,-2.28,At / below average

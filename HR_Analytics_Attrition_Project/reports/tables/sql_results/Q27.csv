@@ -1,0 +1,10 @@
+department_name,employee_number,job_role_name,monthly_income,income_rank
+Human Resources,1338,Manager,19717,1
+Human Resources,1625,Manager,19658,2
+Human Resources,1973,Manager,19636,3
+Research & Development,259,Manager,19999,1
+Research & Development,1035,Research Director,19973,2
+Research & Development,1191,Manager,19943,3
+Sales,1282,Manager,19847,1
+Sales,1038,Manager,19845,2
+Sales,1740,Manager,19833,3

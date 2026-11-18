@@ -1,0 +1,5 @@
+SalarySlab,Employees,Attrition,AvgMonthlyIncome,AvgYearsAtCompany,Active,AttritionRatePct
+Low (<3K),395,113,2394.1,3.7,282,28.61
+Medium (3K-6K),519,66,4514.6,6.3,453,12.72
+High (6K-10K),275,33,7652.3,7.1,242,12.0
+Very High (10K+),281,25,14826.3,12.9,256,8.9

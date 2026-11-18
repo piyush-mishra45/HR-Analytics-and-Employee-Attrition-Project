@@ -1,0 +1,18 @@
+# Python 3.12+ recommended.
+# Core analysis pipeline (tested on pandas 3.0, numpy 2.5, matplotlib 3.11, seaborn 0.13, scipy 1.18,
+# openpyxl 3.1, reportlab 5.0 with Python 3.12)
+pandas>=2.2,<4
+numpy>=1.26,<3
+matplotlib>=3.8,<4
+seaborn>=0.13,<0.14
+scipy>=1.11,<2
+openpyxl>=3.1,<4
+reportlab>=4.0,<6
+
+# Streamlit dashboard (not executed in the build environment - see README "Verification status")
+streamlit>=1.40,<2
+plotly>=5.20,<7
+
+# Notebooks
+notebook>=7.0,<8
+ipykernel>=6.29,<7

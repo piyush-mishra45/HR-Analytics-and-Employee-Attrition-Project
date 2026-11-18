@@ -1,0 +1,26 @@
+{
+  "name": "HR Analytics Navy",
+  "dataColors": ["#2E6FBA", "#D64545", "#0B1F3A", "#8FB8E8", "#1F3C66", "#8A94A6", "#5B9BD5", "#F2B84B"],
+  "background": "#FFFFFF",
+  "foreground": "#0B1F3A",
+  "tableAccent": "#0B1F3A",
+  "good": "#2E6FBA",
+  "bad": "#D64545",
+  "neutral": "#8A94A6",
+  "textClasses": {
+    "title": { "fontFace": "Segoe UI Semibold", "fontSize": 14, "color": "#0B1F3A" },
+    "label": { "fontFace": "Segoe UI", "fontSize": 10, "color": "#1F3C66" },
+    "callout": { "fontFace": "Segoe UI Semibold", "fontSize": 28, "color": "#0B1F3A" }
+  },
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "color": { "solid": { "color": "#FFFFFF" } }, "transparency": 0 }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#DDE3EE" } }, "radius": 6 }]
+      }
+    },
+    "page": {
+      "*": { "background": [{ "color": { "solid": { "color": "#F4F6FA" } }, "transparency": 0 }] }
+    }
+  }
+}

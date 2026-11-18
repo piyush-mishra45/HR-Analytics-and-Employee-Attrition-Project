@@ -1,0 +1,127 @@
+{
+  "raw_profile": {
+    "rows": 1470,
+    "columns": 35,
+    "missing_values_total": 0,
+    "duplicate_rows": 0,
+    "duplicate_employee_numbers": 0,
+    "constant_columns": [
+      "EmployeeCount",
+      "Over18",
+      "StandardHours"
+    ],
+    "dtypes": {
+      "Age": "int64",
+      "Attrition": "object",
+      "BusinessTravel": "object",
+      "DailyRate": "int64",
+      "Department": "object",
+      "DistanceFromHome": "int64",
+      "Education": "int64",
+      "EducationField": "object",
+      "EmployeeCount": "int64",
+      "EmployeeNumber": "int64",
+      "EnvironmentSatisfaction": "int64",
+      "Gender": "object",
+      "HourlyRate": "int64",
+      "JobInvolvement": "int64",
+      "JobLevel": "int64",
+      "JobRole": "object",
+      "JobSatisfaction": "int64",
+      "MaritalStatus": "object",
+      "MonthlyIncome": "int64",
+      "MonthlyRate": "int64",
+      "NumCompaniesWorked": "int64",
+      "Over18": "object",
+      "OverTime": "object",
+      "PercentSalaryHike": "int64",
+      "PerformanceRating": "int64",
+      "RelationshipSatisfaction": "int64",
+      "StandardHours": "int64",
+      "StockOptionLevel": "int64",
+      "TotalWorkingYears": "int64",
+      "TrainingTimesLastYear": "int64",
+      "WorkLifeBalance": "int64",
+      "YearsAtCompany": "int64",
+      "YearsInCurrentRole": "int64",
+      "YearsSinceLastPromotion": "int64",
+      "YearsWithCurrManager": "int64"
+    }
+  },
+  "cleaning_log": {
+    "steps": [
+      "Stripped whitespace from column names and text values.",
+      "Missing values found: 0 (imputation logic in place).",
+      "Duplicate rows removed: 0.",
+      "Categorical validation: 0 column(s) with unexpected values.",
+      "Ordinal range validation: 0 column(s) with out-of-range values.",
+      "Logical consistency checks run on tenure/age columns.",
+      "IQR outliers flagged but retained (right-skew in income/tenure is genuine).",
+      "Numeric columns cast to int64; text dimensions cast to category.",
+      "Dropped constant columns: ['EmployeeCount', 'Over18', 'StandardHours'].",
+      "Engineered AttritionFlag, AgeGroup, SalarySlab, TenureBand, PromotionGap (+ sort keys)."
+    ],
+    "invalid_categories": {},
+    "out_of_range_ordinals": {},
+    "logical_inconsistencies": {
+      "YearsAtCompany > TotalWorkingYears": 0,
+      "YearsInCurrentRole > YearsAtCompany": 0,
+      "YearsSinceLastPromotion > YearsAtCompany": 0,
+      "YearsWithCurrManager > YearsAtCompany": 0,
+      "Age - TotalWorkingYears < 14": 0
+    },
+    "outliers_iqr": {
+      "MonthlyIncome": {
+        "lower_fence": -5291.0,
+        "upper_fence": 16581.0,
+        "outlier_count": 114,
+        "outlier_pct": 7.76
+      },
+      "Age": {
+        "lower_fence": 10.5,
+        "upper_fence": 62.5,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "YearsAtCompany": {
+        "lower_fence": -6.0,
+        "upper_fence": 18.0,
+        "outlier_count": 104,
+        "outlier_pct": 7.07
+      },
+      "TotalWorkingYears": {
+        "lower_fence": -7.5,
+        "upper_fence": 28.5,
+        "outlier_count": 63,
+        "outlier_pct": 4.29
+      },
+      "YearsSinceLastPromotion": {
+        "lower_fence": -4.5,
+        "upper_fence": 7.5,
+        "outlier_count": 107,
+        "outlier_pct": 7.28
+      },
+      "DistanceFromHome": {
+        "lower_fence": -16.0,
+        "upper_fence": 32.0,
+        "outlier_count": 0,
+        "outlier_pct": 0.0
+      },
+      "NumCompaniesWorked": {
+        "lower_fence": -3.5,
+        "upper_fence": 8.5,
+        "outlier_count": 52,
+        "outlier_pct": 3.54
+      }
+    },
+    "dropped_constant_columns": [
+      "EmployeeCount",
+      "Over18",
+      "StandardHours"
+    ]
+  },
+  "clean_profile": {
+    "rows": 1470,
+    "columns": 39
+  }
+}

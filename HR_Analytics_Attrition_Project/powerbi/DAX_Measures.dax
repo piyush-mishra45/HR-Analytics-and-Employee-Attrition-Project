@@ -1,0 +1,90 @@
+// =====================================================================
+// HR ANALYTICS & EMPLOYEE ATTRITION - POWER BI DAX MEASURES
+//
+// Prerequisite: Home > Get data > Text/CSV > data/processed/hr_attrition_cleaned.csv
+//   In Power Query rename the query to:  employees
+//   Column names used below exist in that file exactly as written.
+// Create each measure via  Modeling > New measure  (paste one block at a time).
+// Create a blank table "_Measures" (Enter data) and keep all measures there for tidiness.
+// =====================================================================
+
+// ---------------------------------------------------------------- core KPIs
+Total Employees =
+DISTINCTCOUNT ( employees[EmployeeNumber] )
+
+Attrition Count =
+CALCULATE (
+    [Total Employees],
+    employees[Attrition] = "Yes"
+)
+
+Active Employees =
+CALCULATE (
+    [Total Employees],
+    employees[Attrition] = "No"
+)
+
+Attrition Rate =
+DIVIDE ( [Attrition Count], [Total Employees], 0 )
+// Format: Measure tools > Format > Percentage, 1 decimal place  (format string "0.0%")
+
+Average Salary =
+AVERAGE ( employees[MonthlyIncome] )
+// Format: Whole number with thousands separator ("#,0")
+
+Average Age =
+AVERAGE ( employees[Age] )
+// Format: Decimal, 1 place ("0.0")
+
+// ------------------------------------------------------- supporting measures
+Average Tenure (Years) =
+AVERAGE ( employees[YearsAtCompany] )
+
+Average Experience (Years) =
+AVERAGE ( employees[TotalWorkingYears] )
+
+// Company-wide rate that ignores slicers / visual filters - used as a reference line
+Company Attrition Rate =
+CALCULATE ( [Attrition Rate], ALL ( employees ) )
+
+Attrition Rate vs Company (pts) =
+[Attrition Rate] - [Company Attrition Rate]
+// Format: "+0.0%;-0.0%;0.0%"
+
+Overtime Attrition Rate =
+CALCULATE ( [Attrition Rate], employees[OverTime] = "Yes" )
+
+No Overtime Attrition Rate =
+CALCULATE ( [Attrition Rate], employees[OverTime] = "No" )
+
+Overtime Share of Workforce =
+DIVIDE (
+    CALCULATE ( [Total Employees], employees[OverTime] = "Yes" ),
+    [Total Employees],
+    0
+)
+
+Share of All Leavers =
+DIVIDE (
+    [Attrition Count],
+    CALCULATE ( [Attrition Count], ALL ( employees ) ),
+    0
+)
+
+Low Job Satisfaction Attrition Rate =
+CALCULATE ( [Attrition Rate], employees[JobSatisfaction] <= 2 )
+
+// Dynamic KPI subtitle for card tooltips / titles
+Attrition Summary Text =
+FORMAT ( [Attrition Count], "#,0" ) & " of " & FORMAT ( [Total Employees], "#,0" )
+    & " employees left (" & FORMAT ( [Attrition Rate], "0.0%" ) & ")"
+
+// Conditional-format helper: 1 when a segment is above the company rate
+Above Company Rate Flag =
+IF ( [Attrition Rate] > [Company Attrition Rate], 1, 0 )
+
+// ------------------------------------------------- sort-order columns (do in model view)
+// Select column > Column tools > Sort by column:
+//   employees[SalarySlab]  sort by  employees[SalarySlabOrder]
+//   employees[TenureBand]  sort by  employees[TenureBandOrder]
+// (AgeGroup, PromotionGap sort correctly alphabetically.)

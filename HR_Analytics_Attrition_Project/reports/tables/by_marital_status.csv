@@ -1,0 +1,4 @@
+MaritalStatus,Employees,Attrition,AvgMonthlyIncome,AvgYearsAtCompany,Active,AttritionRatePct
+Single,470,120,5889.5,6.4,350,25.53
+Married,673,84,6793.7,7.3,589,12.48
+Divorced,327,33,6786.3,7.3,294,10.09

@@ -1,0 +1,4 @@
+PromotionGap,Employees,Attrition,AvgMonthlyIncome,AvgYearsAtCompany,Active,AttritionRatePct
+0-1 yrs,938,159,5677.4,5.1,779,16.95
+2-4 yrs,272,41,6912.4,7.5,231,15.07
+5+ yrs,260,37,9053.0,13.5,223,14.23
